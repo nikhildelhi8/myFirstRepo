@@ -1,0 +1,24 @@
+<p>product works!</p>
+<h1>Products details </h1>
+<h2>Product Name : {{productname|uppercase}}</h2>
+<h2>Product Price: {{price| currency:'INR'}}</h2>
+<h2>Quantity : {{quantity}}</h2>
+<h2>Amount of each quantity : {{Amount |currency:'INR'}}</h2>
+<h2>Total amount : {{price * quantity}}</h2>
+<h2>Manufacture Date : {{mfd| date:'shortDate'}}</h2>
+
+<h2>The product list is below : </h2>
+<ol>
+   <h3><li *ngFor="let f of product_name"><strong>{{f}}</strong></li></h3> 
+    
+</ol>
+
+<table border="1">
+
+    <tr><th>Name</th><td>Price</td><td>Quantity</td><td>MF Date</td></tr>
+    
+    <tr *ngFor="let p of products"><td>{{p.productname}}</td><td>{{p.price}}</td><td>{{p.quantity}}</td><td>{{p.mfd|date:'shortDate'}}</td></tr>
+    
+    
+    
+    </table>
